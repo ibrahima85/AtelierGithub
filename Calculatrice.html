@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+  <head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		
+		<title>Calculatrice</title>
+		<meta name="author" content="Orientation Informatique" />
+		<meta name="description" content="Calculatrice en JavaScript" />
+		
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	</head>
+	<body>
+			<h1>Calculatrice</h1>
+			<br>
+			<script src="calc.js"></script>
+			<noscript>Désolé, la calculatrice a besoin de JavaScript pour fonctionner!</noscript>
+			<form>
+					
+					<table>
+						<tbody>
+							<tr>
+								<td colspan="4">
+								<input name="texte" size="20" type="text" readonly />
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<input value="7" onclick="ajouteChiffre(this.form,'7')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="8" onclick="ajouteChiffre(this.form,'8')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="9" onclick="ajouteChiffre(this.form,'9')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="+" onclick='store(this.form); setOp("somme")' type="button" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<input value="4" onclick="ajouteChiffre(this.form,'4')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="5" onclick="ajouteChiffre(this.form,'5')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="6" onclick="ajouteChiffre(this.form,'6')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="-" onclick='store(this.form); setOp("soustraction")' type="button" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<input value="1" onclick="ajouteChiffre(this.form,'1')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="2" onclick="ajouteChiffre(this.form,'2')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="3" onclick="ajouteChiffre(this.form,'3')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="*" onclick='store(this.form); setOp("multiplication")' type="button" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<input value="0" onclick="ajouteChiffre(this.form,'0')" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="." onclick="ajoutePoint(this.form)" type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="C" onclick='raz(this.form)' type="button" class="mainbutton" />
+								</td>
+								<td>
+								<input value="/" onclick='store(this.form); setOp("division")' type="button" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+								<input name="affichage" size="15" type="text" readonly />
+								</td>
+								<td>
+								<input value="=" onclick='storeEq(this.form); calc(this.form)' type="button" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+			</form>
+			<footer>
+				Orientation Informatique - atelier Calculatrice
+			</footer>
+	</body>
+</html>
